@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to the Font Awesome CSS library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Title for the web page -->
+    <title>Sign Up Page</title>
+</head>
+
+<body>
+
+    <!-- Sign Up Page -->
+    <!-- Main container for the entire page -->
+    <div class="container">
+        <!-- Left side container -->
+        <div class="left-container">
+            <!-- Logo image -->
+            <img class="logo" src="components/img/quiz0.png" alt="Logo">
+            <!-- Rounded container for SVG image -->
+            <div class="rounded-container">
+                <!-- Container for the SVG image -->
+                <div class="svg-container">
+                    <!-- SVG image -->
+                    <img class="svg-image" src="components/img/Que.svg" alt="SVG Image">
+                </div>
+            </div>
+            <!-- Text below SVG image -->
+            <div class="svg-text">
+                <!-- Heading -->
+                <h2>Take a Quiz be more creative <br> in your work</h2>
+            </div>
+        </div>
+        <!-- Right side container -->
+        <div class="right-container">
+            <!-- Login text and button -->
+            <div class="login-text">Already have an account? <button id="loginButton"
+                    class="btnLogin-popup">Login</button></div>
+            <!-- Top left content -->
+            <div class="top-left-content">
+                <!-- Main heading -->
+                <h2 id="top-heading">Welcome to QuizoTech</h2>
+                <!-- Subheading -->
+                <h6 id="top-heading2">Register your account</h6>
+            </div>
+            <!-- Input section for registration form -->
+            <div class="input-section" id="registration-form">
+                <!-- Label and input field for Name -->
+                <label for="name" class="input-box1"> Enter Name</label>
+                <input id="name" class="input-box name-input" type="text" placeholder="Your Full Name" required>
+
+                <!-- Label and input field for Email -->
+                <label for="email" class="input-box1">Enter Email</label>
+                <input id="email" class="input-box email-input" type="email" placeholder="Email Id" required>
+
+                <!-- Label and input field for Password -->
+                <label for="password" class="input-box1">Create Password</label>
+                <div class="password-container">
+                    <input id="password-signup" class="input-box pass-input" type="password" placeholder="Password@123"
+                        required>
+                    <!-- Eye icon to toggle password visibility -->
+                    <span class="toggle-password-signup"
+                        onclick="togglePasswordVisibility('password-signup', 'toggle-password-signup')">
+                        <ion-icon name="eye"></ion-icon>
+                    </span>
+                </div>
+
+                <!-- Sign Up button -->
+                <button onclick="registerUserAndRedirect()" class="sign-up-button">Sign Up</button>
+            </div>
+            <!-- Social media icons -->
+            <div class="social-media-icons">
+                <!-- Text above social media icons -->
+                <p id="top-heading3">Create account with</p>
+                <!-- Icons for Facebook, LinkedIn, and Google -->
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-linkedin"></ion-icon>
+                <ion-icon name="logo-google"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <!-- Next page's content -->
+    <div class="next-page-content" style="display: none;">
+        <div class="container">
+            <!-- Login page -->
+
+            <!-- Main container for the entire page -->
+            <!-- Left side container -->
+            <div class="left-container">
+                <!-- Logo image -->
+                <img class="logo" src="components/img/quiz0.png" alt="Logo">
+                <!-- Rounded container for SVG image -->
+                <div class="rounded-container">
+                    <!-- Container for the SVG image -->
+                    <div class="svg-container">
+                        <!-- SVG image -->
+                        <img class="svg-image" src="components/img/Que.svg" alt="SVG Image">
+                    </div>
+                </div>
+                <!-- Text below SVG image -->
+                <div class="svg-text">
+                    <!-- Heading -->
+                    <h2>Take a Quiz be more creative <br> in your work</h2>
+                </div>
+            </div>
+            <!-- Right side container -->
+            <div class="right-container">
+                <!-- Login text and button -->
+                <div class="login-text">Create an account? <button id="signupbtn" class="sign-up-popup2">Sign
+                        Up</button></div>
+                <!-- Top left content -->
+                <div class="top-left-content">
+                    <!-- Main heading -->
+                    <h2 id="top-heading">Welcome to QuizoTech</h2>
+                    <!-- Subheading -->
+                    <h6 id="top-heading2">Login & start playing</h6>
+                </div>
+                <!-- Input section for login form -->
+                <div class="input-section" id="login-form">
+                    <!-- Label and input field for Name -->
+                    <label for="name" class="input-box1"> Enter UserName</label>
+                    <input id="login-email" class="input-box email-input" type="email" placeholder="Email Id" required>
+
+                    <!-- Label and input field for Password -->
+                    <label for="password" class="input-box1">Enter Password</label>
+                    <div class="password-container">
+                        <input id="login-password" class="input-box pass-input" type="password" placeholder="Password">
+                        <!-- Eye icon to toggle password visibility -->
+                        <span class="toggle-password-login"
+                            onclick="togglePasswordVisibility('password-login', 'toggle-password-login')">
+                            <ion-icon name="eye"></ion-icon>
+                        </span>
+                    </div>
+
+                    <!-- Forgot Password link -->
+                    <a href="#" class="forgot-password2">Forgot Password?</a><br>
+
+                    <!-- Login button -->
+                    <button onclick="loginUser()" class="login-button">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Ionicons scripts for social media icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Your custom JavaScript file -->
+    <script src="main.js"></script>
+</body>
+
+</html>

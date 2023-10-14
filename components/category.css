@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+
+/* Global Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Navigation Styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+    background-color: white;
+    order: -1;
+    /* Move .nav-container to the top */
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+}
+
+
+/* CSS for the custom container */
+.custom-container {
+    position: fixed; /* Fixed position for sticking to the viewport */
+    top: 0; /* 20% from the top of the viewport */
+    right: 15%; /* Right side of the viewport */
+    width: 50px;
+    height: 60px; /* Set the height as needed */
+    background-color: #04364A; /* Background color for the box */
+    color: #fff; /* Text color */
+    text-align: center;
+    line-height: 50px; /* Vertically center text */
+    z-index: 999; /* Ensure it's above other content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add box shadow */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Style for the image */
+.custom-container img {
+    width: 35px; /* Set the width to 35px as requested */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Center the image horizontally */
+    margin: 15px auto; /* Center the image horizontally */
+    transition: transform 0.2s; /* Add a transition for the hover effect */
+}
+
+/* Hover effect for the image */
+.custom-container:hover img {
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+.profile-pic {
+    color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    z-index: 10000;
+    justify-content: flex-end; /* Changed 'right' to 'flex-end' */
+    align-items: flex-start; /* Changed 'right' to 'flex-start' */
+    position: absolute; /* Use absolute positioning to place it at the top right corner */
+    top: 1.5%; /* Adjust the top offset as needed */
+    right: 10%; /* Adjust the right offset as needed */
+    transition: all 0.3s ease;
+}
+
+/* Rest of your CSS remains the same */
+.profile-pic input {
+    display: none;
+}
+
+.profile-pic img {
+    position: absolute;
+    object-fit: cover;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    border-radius: 100px;
+    z-index: 0;
+}
+
+.profile-pic .-label {
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+}
+
+.profile-pic:hover .-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    color: #BEFFF7;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 100px;
+    margin-bottom: 0;
+}
+
+.profile-pic span {
+    font-size: 8px;
+    display: inline-flex;
+    padding: 0.2em;
+    height: 2em;
+}
+
+.profile-back-container{
+    position: fixed; /* Fixed position for sticking to the viewport */
+    top: 3%; /* 20% from the top of the viewport */
+    right: 0; /* Right side of the viewport */
+    width: 210px;
+    height: 24px; /* Set the height as needed */
+    background-color: #04364A; /* Background color for the box */
+    color: #fff; /* Text color */
+    text-align: center;
+    line-height: 50px; /* Vertically center text */
+    z-index: 999; /* Ensure it's above other content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add box shadow */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.user-container {
+    position: fixed; /* Fixed position for sticking to the viewport */
+    top: 80%; /* 20% from the top of the viewport */
+    left: 0; /* Right side of the viewport */
+    width: fit-content;
+    height: 30px; /* Set the height as needed */
+    background-color: #04364A; /* Background color for the box */
+    color: #fff; /* Text color */
+    text-align: center;
+    line-height: 27px; /* Vertically center text */
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    z-index: 999; /* Ensure it's above other content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add box shadow */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Text Container Styles */
+.text-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.text-container p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #102C57;
+    margin: 0;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+    
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 70px;
+    height: 40px;
+    background-color: whitesmoke;
+    color: #453838;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0px 0;
+    top: 10px;
+    right: 50px;
+    font-weight: 800;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Category Container Styles */
+.category-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 20px 20px 20px;
+}
+
+/* Card Styles */
+.card {
+    width: 200px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Start from the top */
+    border-radius: 25px 25px 0 0;
+    /* Top-left and top-right corners rounded */
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Individual Card Background Gradients */
+.card:nth-child(1) {
+    background: linear-gradient(to top right, #bf360c, #ff5722, #ffab91, #ffccbc);
+    box-shadow: 0px -20px 14px 8px rgba(191, 54, 12, 0.10);
+    /* Blue shadow */
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(to top right, #014674, #1b90d8, #6fd2fa, #beeafc);
+    box-shadow: 0px -20px 14px 8px rgba(60, 102, 140, 0.10);
+    /* Green shadow */
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(to top right, #948712, #bfab13, #f0de6a, #f7eb95);
+    box-shadow: 0px -20px 14px 8px rgba(148, 135, 18, 0.10);
+    /* Pink shadow */
+}
+
+.card:nth-child(4) {
+    background: linear-gradient(to top right, #015e58, #24a4a4, #6ac5bc, #c1e5e3);
+    box-shadow: 0px -20px 14px 8px rgba(1, 94, 88, 0.10);
+    /* Blue shadow */
+}
+
+.card:nth-child(5) {
+    background: linear-gradient(to top right, #00294a, #235074, #3a80b9, #71b8f2);
+    box-shadow: 0px -20px 14px 8px rgba(0, 41, 74, 0.10);
+    /* Orange shadow */
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 0px 20px rgba(3, 3, 3, 0.3);
+}
+
+.selected {
+    border: 2px solid #3AA6B9; /* Add your desired border styles */
+}
+
+
+.card img {
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    /* Adjust margin to create spacing from the top */
+}
+
+/* Card Text Styles */
+.card-text {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #102C57;
+    /* Adjust the color as needed */
+}
+
+.course-name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #102C57;
+    margin: 5px 0 5px 0;
+}
+
+/* Button Styles */
+
+.start-quiz-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.start-button:hover {
+    background-color: #009688;
+    /* New background color on hover */
+}
+
+.start-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: skewX(-20deg);
+    transition: left 2s linear;
+    pointer-events: none;
+}
+
+.start-button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Libre Baskerville', serif;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.1s;
+}
+
+.start-button:hover::before {
+    left: 100%;
+}
+
+
+/* Alert Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 17% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close {
+    color: #aaa;
+    font-size: 38px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(241, 1, 1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container {
+    margin-right: 20px;
+}
+
+.icon-container img {
+    width: 60px;
+    height: 60px;
+}
+
+.message {
+    color: #102C57;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.category-name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #102C57;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #116A7B;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+    margin-bottom: 20px;
+    color: #F2BED1;
+    font-weight: 800;
+}
+
+.timer {
+    flex: 1;
+    text-align: left; /* Align the timer to the left */
+}
+
+.question-index {
+    flex: 1;
+    text-align: right; /* Align the question index to the right */
+}
+
+
+.quiz-container {
+    font-family: 'Nunito', Arial, sans-serif;
+    position: relative;
+    display: none; /* Make sure it's visible */
+    clear: both; /* Clear any floats inside */
+    width: 90%;
+    height: 70%;
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto; 
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+    border-radius: 10px; 
+}
+
+.Question-container {
+    float: left; /* Float the question container to the left */
+    width: 43%; /* Set the width to 50% to take up the left side */
+    height: 80%;
+    padding: 20px; /* Add padding for spacing inside the container */
+    background-image: url('img/bgque.jpeg'); /* Replace 'your-image-url.jpg' with the URL of your background image */
+    background-size: cover; /* Adjust background size as needed */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
+    border: 1px solid #ccc; /* Add a border for separation */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.question-text {
+    color: #BEFFF7;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
+
+
+.options-container {
+    float: right;
+    width: 50%;
+    height: 60%;
+    padding: 20px; /* Add padding for spacing inside the container */
+    background-color: #116A7B; /* Add a background color to the options container */
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    border-radius: 5px; /* Add rounded corners */
+    display: flex;
+    flex-direction: column; /* Format options vertically */
+    justify-content: space-between; /* Add space between options */
+}
+
+.options {
+    width: auto;
+    height: 16%;
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: #D2E0FB;
+    font-weight: 800;
+    background-color: #102C57;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.options:hover {
+    background: rgba(255, 18, 69, 0.4);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+}
+
+/* Add additional styling for the radio buttons and labels as needed */
+.option-radio{
+    display: none; /* Hide the default radio buttons */
+}
+
+.alloptions {
+    font-family: 'Nunito', Arial, sans-serif;
+    display: block; /* Ensure the text label is displayed */
+}
+
+.next-button, .submit-button {
+    font-family: 'Nunito', Arial, sans-serif;
+    position: absolute;
+    bottom: 50px; /* Adjust this value for desired vertical positioning */
+    right: 90px; /* Adjust this value for desired horizontal positioning */
+    background-color: #4CAF50; /* Green background color */
+    color: #fff; /* White text color */
+    padding: 8px 18px; /* Padding for spacing */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Add a smooth transition effect */
+
+    /* Unique styles for ChatGPT Save & Submit button */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.next-button:hover, .submit-button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    transform: scale(1.05); /* Scale up the button slightly on hover */
+}
+
+
+
+
+
+
+/* Custom Alert Modal Styles */
+.custom-alert-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.custom-alert-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.alert-message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.ok-button {
+    padding: 8px 20px;
+    background-color: #FF8551;
+    color: #F7FFE5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.9s, background-position 0.9s;
+    background-position: 0 0; /* Initial background position */
+    background-image: linear-gradient(to right, #116A7B 50%, transparent 50%); /* Background color transition */
+    background-size: 200% 100%; /* Double the width of the gradient to accommodate the sliding effect */
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.ok-button:hover {
+    color: #fff; /* Change text color on hover */
+    background-position: 100% 0; /* Slide the background color to the right */
+}
+
+
+
+.result-container {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/* Select the element with class "greeting" and apply styling */
+h2.greeting {
+    font-size: 20px; /* Set the font size to 24 pixels */
+    color: #007bff; /* Set the text color to a blue shade */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center-align the text */
+    border-radius: 5px; /* Apply rounded corners */
+    position: relative;
+    z-index: 1;
+}
+
+
+.lcontainer{
+    float: left;
+    width: 65%;
+    margin: 0;
+    height: fit-content;
+    text-align: center;
+}
+
+.Championcupimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    margin: 0;
+}
+
+.medal1,.medal2,.medal3,.sadimojiimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0.1%;
+    right: 1.5%;
+    width: 7%;
+    margin: 0;
+    z-index: 1000;
+}
+
+.result-text2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 64%;
+    left: 37.5%;
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0;
+    font-size: 35px;
+    font-weight: bolder;
+    color: #009688;
+}
+
+
+
+.rcontainer{
+    height: 20%;
+    width: 20%;
+    background-size:   150%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.diploma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0%;
+    right: 3%;
+    width: 20%;
+}
+
+.result-trophy {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.nameuser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 27%;
+    right: 12%;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: #363062;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.congratulations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30.5%;
+    right: 9.4%;
+    font-family: "Arial", sans-serif;
+    font-size: 13px;
+    color: #176B87;
+    font-weight: 900;
+}
+
+.result-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 21%;
+    right: 7.1%;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 14px;
+    color: #009688;
+}
+
+.signature2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 17%;
+    right: 8%;
+    width: 5%;
+}
+
+/* Styling for the Restart and Exit buttons */
+#restartButton, #exitButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 10%;
+    right: 39%;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff0000; /* Red background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+#restartButton{
+    margin-right: 15%;
+}
+
+#restartButton:hover, #exitButton:hover {
+    border: 2px solid #ff0000;
+    background-color: #ff9900; /* Lighter red on hover */
+    transform: scale(1.0); /* Slight scale increase on hover */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+}
+
+/* Add other extreme effects as desired */
+

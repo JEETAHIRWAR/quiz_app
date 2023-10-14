@@ -1,0 +1,183 @@
+HTML:
+  Q1:
+    Question: What is the purpose of the <track> tag, and when should it be used?
+    Options:
+      - The <track> tag is used for specifying subtitles. It is typically applied as a child of the <audio> and <video> tags.
+      - The <track> tag is used for specifying subtitles. It is typically applied as a child of the <video> tag.
+      - The <track> tag is used for specifying subtitles, captions, and other types of time-based text. It is typically applied as a child of the <video> tag.
+      - The <track> tag is used for specifying subtitles, captions, and other types of time-based text. It is typically applied as a child of the <audio> and <video> tags.
+    correct: 3
+
+  Q2:
+    Question: What are the best examples of void elements?
+    Options:
+      - <link><meta><title>
+      - <br><base><source>
+      - <input><br><p>
+      - <area><embed><strong>
+    correct: 2
+
+  Q3:
+    Question: In HTML5, which tag or tags embed a webpage inside of a webpage?
+    Options:
+      - <iframe>, <frame>, and <frameset>
+      - <frame>
+      - <iframe>
+      - <frame> and <frameset>
+    correct: 3
+
+  Q4:
+    Question: Where do <header> and <footer> tags typically occur?
+    Options:
+      - as children of <body>, <article>, <aside>, and <section> tags
+      - as children of <body>, <article>, and <section> tags
+      - as children of <body>, <article>, <aside>, <nav>, and <section> tags
+      - as children of <body>, <article>, <table>, and <section> tags
+    correct: 2
+
+  Q5:
+    Question: What is the best way to apply bold styling to text?
+    Options:
+      - <strong>
+      - Use CSS.
+      - <bold>
+      - <b>
+    correct: 1
+
+CSS:
+  Q1:
+    Question: What does CSS stand for?
+    Options:
+      - Colorful Style Sheets
+      - Computer Style Sheets
+      - Creative Style Sheets
+      - Cascading Style Sheets
+    correct: 4
+
+  Q2:
+    Question: What is the purpose of the CSS z-index property?
+    Options:
+      - It determines the stacking order of positioned elements.
+      - It defines the size of an element.
+      - It specifies the color of text.
+      - It sets the width of the border.
+    correct: 1
+
+  Q3:
+    Question: Which CSS property is used to control the spacing between individual characters?
+    Options:
+      - text-transform
+      - text-align
+      - line-height
+      - letter-spacing
+    correct: 4
+
+  Q4:
+    Question: What is the purpose of the CSS box-sizing property?
+    Options:
+      - It controls the visibility of an element.
+      - It sets the background color of an element.
+      - It controls how the total width and height of an element are calculated.
+      - It adjusts the font size of an element.
+    correct: 3
+
+  Q5:
+    Question: Which CSS selector is used to select elements with a specific class?
+    Options:
+      - element
+      - .element
+      - element
+      - element.class
+    correct: 2
+
+JavaScript:
+  Q1:
+    Question: What is the correct way to declare a JavaScript variable?
+    Options:
+      - variable x = 5;
+      - var x = 5;
+      - let x = 5;
+      - const x = 5;
+    correct: 3
+
+  Q2:
+    Question: What is the purpose of the JavaScript querySelector method?
+    Options:
+      - It modifies the styling of an element.
+      - It selects the first element that matches a specified CSS selector.
+      - It creates a new HTML element.
+      - It adds an event listener to an element.
+    correct: 2
+
+  Q3:
+    Question: How do you write a comment in JavaScript?
+    Options:
+      - <!-- This is a comment -->
+      - // This is a comment
+      - /* This is a comment */
+      -  This is a comment
+    correct: 2
+
+  Q4:
+    Question: What does the JavaScript Array.push() method do?
+    Options:
+      - It removes an element from an array.
+      - It reverses the order of the elements in an array.
+      - It adds one or more elements to the end of an array.
+      - It sorts the elements of an array in alphabetical order.
+    correct: 3
+
+  Q5:
+    Question: What is the purpose of the JavaScript setTimeout function?
+    Options:
+      - It adds a new CSS class to an element.
+      - It delays the execution of a function by a specified time interval.
+      - It creates a loop that continuously runs a function.
+      - It checks if an element exists in the DOM.
+    correct: 2
+
+MySQL:
+  Q1:
+    Question: Which SQL statement is used to retrieve data from a database?
+    Options:
+      - RETRIEVE
+      - GET
+      - SELECT
+      - FETCH
+    correct: 3
+
+  Q2:
+    Question: What is the purpose of the SQL WHERE clause?
+    Options:
+      - It specifies the columns to retrieve in a query.
+      - It orders the result set in ascending or descending order.
+      - It filters the result set to include only rows that meet a specified condition.
+      - It performs calculations on the columns in the result set.
+    correct: 3
+
+  Q3:
+    Question: Which SQL statement is used to update data in a database?
+    Options:
+      - UPDATE
+      - MODIFY
+      - SAVE
+      - ALTER
+    correct: 1
+
+  Q4:
+    Question: What is the purpose of the SQL JOIN clause?
+    Options:
+      - It creates a new table in the database.
+      - It combines rows from two or more tables based on a related column.
+      - It filters the result set based on a specified condition.
+      - It calculates aggregate functions on the columns in the result set.
+    correct: 2
+
+  Q5:
+    Question: Which SQL function is used to count the number of rows in a table?
+    Options:
+      - SUM()
+      - MAX()
+      - AVG()
+      - COUNT()
+    correct: 4

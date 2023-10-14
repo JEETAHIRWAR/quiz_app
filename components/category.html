@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="category.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="img/quiz02.png" alt="Logo">
+        </div>
+
+        <div class="profile-pic">
+            <label class="-label" for="file">
+                <span class="glyphicon glyphicon-camera"></span>
+                <span>Change Image</span>
+            </label>
+            <input id="file" type="file" onchange="loadFile(event)" />
+            <img src="img/profile.png" id="output" width="200" />
+        </div>
+    </div>
+
+    <div class="profile-back-container"></div>
+
+    <div class="custom-container">
+        <a href="../index.html" id="custom-link" class="tooltip">
+            <img class="user-photo" src="img/Logout.png" alt="Custom Image">
+            <span class="tooltiptext">Logout</span>
+        </a>
+    </div>
+
+    <div class="user-container" id="user-name">Jeet Airwar</div>
+
+
+    <div class="text-container category-name">
+        <p>Choose one from categories below & see how many questions you can answer <br> correctly out of 20
+            questions!</p>
+    </div>
+
+    <div class="category-container">
+        <div class="card">
+            <img src="img/html.png" alt="HTML">
+            <p class="course-name">HTML</p>
+            <p class="card-text">Basic interview questions<br>Good Luck!</p>
+        </div>
+        <div class="card">
+            <img src="img/css.png" alt="CSS">
+            <p class="course-name">CSS</p>
+            <p class="card-text">Basic interview questions<br>Good Luck!</p>
+        </div>
+        <div class="card">
+            <img src="img/javascript.png" alt="JavaScript">
+            <p class="course-name">JavaScript</p>
+            <p class="card-text">Basic interview questions<br>Good Luck!</p>
+        </div>
+        <div class="card">
+            <img src="img/python.png" alt="Python">
+            <p class="course-name">Python</p>
+            <p class="card-text">Basic interview questions<br>Good Luck!</p>
+        </div>
+        <div class="card">
+            <img src="img/mysql.png" alt="MySQL">
+            <p class="course-name">MySQL</p>
+            <p class="card-text">Basic interview questions<br>Good Luck!</p>
+        </div>
+    </div>
+
+    <div class="start-quiz-btn">
+        <button class="start-button">Start Quiz</button>
+    </div>
+
+    <div class="text-container">
+        <p>You will get 🎉20 point for each correct answer. At the end of the Quiz, your total score will be displayed.
+            <br>Maximum score is 🎉200 points.
+        </p>
+    </div>
+
+    <div class="modal" id="alertModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="icon-container">
+                    <img src="img/alert-icon.png" alt="Alert Icon">
+                </div>
+                <div class="message">
+                    Please select a category before starting the quiz.⚠️
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Home Section -->
+
+    <!-- Start Question Section -->
+
+    <div class="quiz-container clearfix">
+        <div class="timer-container">
+            <div class="timer">20</div>
+            <div class="question-index">1/5 Attempted 5 out of 20</div>
+        </div>
+        <div class="Question-container">
+            <div class="question-text">Question goes here...</div>
+        </div>
+        <div class="options-container">
+            <label class="options" for="option1">
+                <input type="radio" id="option1" class="option-radio" name="option" value="1">
+                <span class="alloptions">Option 1</span>
+            </label>
+            <label class="options" for="option2">
+                <input type="radio" id="option2" class="option-radio" name="option" value="2">
+                <span class="alloptions">Option 2</span>
+            </label>
+            <label class="options" for="option3">
+                <input type="radio" id="option3" class="option-radio" name="option" value="3">
+                <span class="alloptions">Option 3</span>
+            </label>
+            <label class="options" for="option4">
+                <input type="radio" id="option4" class="option-radio" name="option" value="4">
+                <span class="alloptions">Option 4</span>
+            </label>
+        </div>
+        <button class="next-button" id="nextButton">Next Question</button>
+        <button class="submit-button" style="display: none;">Submit</button> <!-- Add this line -->
+    </div>
+
+    <div class="result-container">
+        <h2 class="greeting" id="greetings">🎉Congratulations!🥳 You have completed the Quiz.</h2>
+        <div class="lcontainer">
+            <img src="img/holding_winning.png" class="Championcupimg" alt="Championcup" srcset="">
+            <img src="img/medal1.png" class="medal1" alt="" srcset="">
+            <img src="img/medal2.png" class="medal2" alt="" srcset="">
+            <img src="img/medal3.png" class="medal3" alt="" srcset="">
+            <img src="img/sadimojiimg.png" class="sadimojiimg" alt="" srcset="">
+            <div class="result-text2">
+                <p id="result-text2"></p>
+            </div>
+        </div>
+        <div class="rcontainer">
+            <img src="img/Descargar certificado y diploma gratis.jpeg" class="diploma" alt="">
+            <div class="congratulations">
+                <p>Congratulations</p>
+            </div>
+            <div class="nameuser" id="user-name">Jeet Airwar</div>
+            <div class="result-text">
+                <p id="result-text"></p>
+            </div>
+            <img src="img/signature2.png" class="signature2" alt="">
+        </div>
+        <button id="restartButton">Restart</button>
+        <button id="exitButton">Exit</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+    <script src="category.js"></script>
+</body>
+
+</html>

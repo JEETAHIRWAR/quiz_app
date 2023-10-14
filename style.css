@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting up default styles for the entire page */
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting a default font size for better responsiveness */
+html {
+    font-size: 16px;
+}
+
+/* Styling for the sign-up form container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Hide the container by default */
+.hidden {
+    display: none;
+}
+
+
+/* Styling for the left side of the sign-up form */
+.left-container {
+    position: relative;
+    flex: 1;
+    background-color: #eefcfa;
+    padding: 20px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+/* Creating a rounded container for the logo and image */
+.rounded-container {
+    width: 340px;
+    height: 340px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px rgba(170, 254, 237, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-top: 130px;
+}
+
+/* Styling for the SVG image container */
+.svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the SVG image */
+.svg-image {
+    width: 550%;
+    max-height: none;
+    align-self: flex-start;
+}
+
+/* Styling for the SVG text */
+.svg-text {
+    position: absolute;
+    bottom: 19%;
+    left: 52%;
+    transform: translateX(-54%);
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: #102C57;
+}
+
+/* Styling for the logo image */
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: auto;
+    padding: 2px;
+}
+
+/* Styling for the right side of the sign-up form */
+.right-container {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styling for the login text */
+.login-text {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    text-align: right;
+    color: #61677A;
+    font-size: 13px;
+    padding: 10px;
+}
+
+/* Styling for the input section */
+.input-section {
+    width: 65%;
+    padding: 20px;
+}
+
+/* Styling for the input labels */
+.input-box1 {
+    color: #61677A;
+    font-size: 0.9em;
+    margin-top: 12px;
+    margin-bottom: 2px;
+    padding-bottom: 6px;
+}
+
+/* Styling for the input boxes */
+.input-box {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Styling for the placeholder email */
+.email-input::placeholder {
+    color: #999;
+    font-size: 15px;
+    font-style: normal;
+}
+/* Styling for the placeholder password */
+.pass-input::placeholder {
+    color: #999;
+    font-size: 15px;
+    font-style: normal;
+}
+/* Styling for the placeholder text */
+.name-input::placeholder {
+    color: #999;
+    font-size: 15px;
+    font-style: normal;
+}
+
+/* Styling for the password container */
+.password-container {
+    position: relative;
+}
+
+/* Styling for the toggle password button */
+.toggle-password-login {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Styling for the eye icon */
+.toggle-password-login ion-icon {
+    font-size: 1.2rem;
+    color: #61677A;
+    transition: color 0.3s;
+}
+
+/* Styling for the eye icon on hover */
+.toggle-password-login:hover ion-icon {
+    color: #468B97;
+}
+
+/* Styling for the toggle password button */
+.toggle-password-signup {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Styling for the eye icon */
+.toggle-password-signup ion-icon {
+    font-size: 1.2rem;
+    color: #61677A;
+    transition: color 0.3s;
+}
+
+/* Styling for the eye icon on hover */
+.toggle-password-signup:hover ion-icon {
+    color: #468B97;
+}
+
+/* Styling for input box when focused */
+.input-box:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+/* Styling for the top left content */
+.top-left-content {
+    padding: 20px;
+    margin: 20px 150px 0 0;
+}
+
+/* Styling for the top heading */
+#top-heading {
+    color: #102C57;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    margin-left: 0;
+}
+
+/* Styling for the second top heading */
+#top-heading2 {
+    color: #61677A;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 3px;
+    margin-left: 0;
+}
+
+/* Styling for the third top heading */
+#top-heading3 {
+    color: #61677A;
+    margin-top: 8px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+/* Styling for the Sign Up button */
+.sign-up-button {
+    background-color: #116A7B;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 38px;
+    margin-top: 20px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.9s, background-position 0.9s;
+    background-position: 0 0;
+    background-image: linear-gradient(to left, #FF8551 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Styling for the Sign Up button on hover */
+.sign-up-button:hover {
+    color: #fff;
+    background-position: 100% 0;
+}
+
+/* Styling for the login-button */
+.login-button {
+    background-color: #116A7B;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 38px;
+    margin-top: 20px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.9s, background-position 0.9s;
+    background-position: 0 0;
+    background-image: linear-gradient(to left, #FF8551 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Styling for the login-button on hover */
+.login-button:hover {
+    color: #fff;
+    background-position: 100% 0;
+}
+
+/* Styling for the sign-up button popup */
+.right-container .btnLogin-popup,
+.right-container .sign-up-popup2 {
+    width: 75px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background: transparent;
+    border: 2px solid #D8D9DA;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #61677A;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Styling for the sign-up button popup on hover */
+.right-container .btnLogin-popup:hover,
+.right-container .sign-up-popup2:hover {
+    background-color: #FF8551;
+    color: #fff;
+    border-color: #FF8551;
+}
+
+/* Styling for social media icons */
+.social-media-icons {
+    position: absolute;
+    bottom: 55px;
+    left: 61%;
+    display: flex;
+}
+
+/* Styling for individual social media icons */
+.social-media-icons ion-icon {
+    margin-right: 10px;
+    margin-top: 3px;
+    height: 25px;
+    width: 25px;
+    color: #6C9BCF;
+    transition: color 0.5s;
+}
+
+/* Styling for social media icons on hover */
+.social-media-icons ion-icon:hover {
+    color: #FE0000;
+}
+
+/* Styling for the "Forgot Password?" link */
+.forgot-password2 {
+    display: block;
+    text-align: right;
+    color: #61677A;
+    font-size: 0.9em;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+/* Styling for the "Forgot Password?" link on hover */
+.forgot-password2:hover {
+    color: #FE0000;
+    /* Change color on hover */
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .next-page-content {
+        flex-direction: column;
+    }
+
+    .left-container {
+        order: 2;
+        /* Move the left container below on smaller screens */
+    }
+
+    .top-left-content {
+        margin: 20px auto;
+        /* Center align on smaller screens */
+        text-align: center;
+    }
+
+    .input-section {
+        width: 54%;
+        padding: 20px;
+    }
+
+    .social-media-icons {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        justify-content: center;
+        /* Center icons horizontally */
+        margin-top: 10px;
+        /* Add spacing from the input boxes */
+    }
+}
+
